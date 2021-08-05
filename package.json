@@ -1,0 +1,16 @@
+{
+  "name": "astpod",
+  "version": "1.0.0",
+  "description": "Astpod Sex",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Astpod",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "fs": "0.0.1-security",
+    "ms": "^2.1.3"
+  }
+}

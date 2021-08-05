@@ -1,0 +1,14 @@
+{
+    "sunucuID": "Sunucu ID",
+    "token": "bot tokeni",
+    "owner": ["eval gibi komutları kullanmak için"],
+    "status": ["Serendia Kalp Astpod", "Astpod Kalp Serendia"],
+    "sesKanalı": "Botun giricegi ses kanalı",
+    "safe": ["Güvenli kişiler"],
+    "botsafe": ["Bot idleri"],
+    "rolsilmelog": "Rol silindiginde mesajı atıcağı log",
+    "rololuşturmalog": "Rol oluşturulduğunda mesajı atıcağı log",
+    "rolgüncellemelog": "Rol güncellediginde mesajı atıcağı log",
+    "rolvermelog": "Sağ tık rol verdiğinde mesajı atıcağı log",
+    "ytkapatmalog": "Yöneticileri kapatıcağı zaman mesajı atıcağı log"
+}
