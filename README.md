@@ -1,6 +1,6 @@
 # Altyapı Hakkında
 
-Basit bir role guard altyapısıdır. yakında calmdown sistemli database botu gelicektir. bu altyapıda sadece role ile ilgili korumalar vardır
+Basit bir role guard altyapısıdır. 30 stara  calmdown sistemli database botu gelicektir. bu altyapıda sadece role ile ilgili korumalar vardır 
 
 # Kurulum
 
@@ -14,6 +14,7 @@ Basit bir role guard altyapısıdır. yakında calmdown sistemli database botu g
 8) Tokenini girmiş olduğunuz bot sunucuda ekliyse çalışmaya başlayacaktır.
 
 Sorun Olursa: Astpod#2019
+Stara basmayı unutmayın
 
 # Önemli
 
