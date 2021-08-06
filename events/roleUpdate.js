@@ -3,7 +3,7 @@ const client = global.client;
 const x = require("../functions.js")
 module.exports = async (oldRole, newRole) => {
 
-let entry = await newRole.guild.fetchAuditLogs({ type: "ROLE_UPDATE" }).then(audit.entries.first())
+let entry = await newRole.guild.fetchAuditLogs({ type: "ROLE_UPDATE" }).then(audit => audit.entries.first())
 if (Date.now() - entry.createdTimestamp > 5000) return;
 if(cfg.safe.includes(entry.executor.id)) return;
 if(cfg.botsafe.includes(entry.executor.id)) return;
