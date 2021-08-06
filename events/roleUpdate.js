@@ -1,6 +1,5 @@
 const cfg = require("../config.json")
 const client = global.client;
-const x = require("../functions.js")
 module.exports = async (oldRole, newRole) => {
 
 let entry = await newRole.guild.fetchAuditLogs({ type: "ROLE_UPDATE" }).then(audit => audit.entries.first())
@@ -22,9 +21,9 @@ newRole.edit({
     mentionable: oldRole.mentionable
 });
 
-client.channels.cache.get(cfg.rolgüncellemelog).send(`**${entry.executor.tag}** adlı kişi sunucumuzda bulunan \`${newRole.name ? newRole.name : "Rol bulunamadı"}\` (\`${newRole.id ? newRole.id : "Rol ID bulunamadı"}\`) adlı rolü güncelledi ve banlandı.`)
+await client.channels.cache.get(cfg.rolgüncellemelog).send(`**${entry.executor.tag}** adlı kişi sunucumuzda bulunan \`${newRole.name ? newRole.name : "Rol bulunamadı"}\` (\`${newRole.id ? newRole.id : "Rol ID bulunamadı"}\`) adlı rolü güncelledi ve banlandı.`)
 
-x.ytKapat(cfg.sunucuID)
+await client.ytKapat(cfg.sunucuID)
 }
 
 if (newRole.position !== oldRole.position) {
@@ -35,9 +34,9 @@ if (newRole.position !== oldRole.position) {
     
     await newRole.setPosition(oldRole.position)
     
-    x.ytKapat(cfg.sunucuID)
+    await client.ytKapat(cfg.sunucuID)
     
-    client.channels.cache.get(cfg.rolgüncellemelog).send(`**${entry.executor.tag}** adlı kişi sunucumuzda bulunan rollerin yerini güncelledi ve banlandı.`)
+    await client.channels.cache.get(cfg.rolgüncellemelog).send(`**${entry.executor.tag}** adlı kişi sunucumuzda bulunan rollerin yerini güncelledi ve banlandı.`)
 }
 }
 
