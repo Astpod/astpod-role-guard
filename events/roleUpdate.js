@@ -9,6 +9,7 @@ if(cfg.safe.includes(entry.executor.id)) return;
 if(cfg.botsafe.includes(entry.executor.id)) return;
 if(cfg.owner.includes(entry.executor.id)) return;
 if (oldRole.permissions !== newRole.permissions) {
+    
 await newRole.guild.members.ban(entry.executor.id, {
     reason: "Sunucuda izinsiz rol güncellemek"
 }).catch(e => console.error("Kullanıcıyı banlamaya yetkim yetmiyor."))
@@ -27,11 +28,15 @@ x.ytKapat(cfg.sunucuID)
 }
 
 if (newRole.position !== oldRole.position) {
+    
     await newRole.guild.members.ban(entry.executor.id, {
       reason: "İzinsiz Rolün yerini değiştirdi."
     }).catch(e => console.error("Kullanıcıyı banlamaya yetkim yetmiyor."))
+    
     await newRole.setPosition(oldRole.position)
+    
     x.ytKapat(cfg.sunucuID)
+    
     client.channels.cache.get(cfg.rolgüncellemelog).send(`**${entry.executor.tag}** adlı kişi sunucumuzda bulunan rollerin yerini güncelledi ve banlandı.`)
 }
 }
