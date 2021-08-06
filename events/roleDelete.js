@@ -1,6 +1,5 @@
 const cfg = require("../config.json")
 const client = global.client;
-const x = require("../functions.js")
 module.exports = async (role) => {
 
 let entry = await role.guild.fetchAuditLogs({ type: "ROLE_DELETE" }).then(audit => audit.entries.first())
@@ -15,7 +14,7 @@ await role.guild.members.ban(entry.executor.id, {
 
 client.channels.cache.get(cfg.rolsilmelog).send(`**${entry.executor.tag}** adlı kişi sunucumuzda bulunan \`${role.name}\` (\`${role.id}\`) adlı rolü sildi ve banlandı.`)
 
-x.ytKapat(cfg.sunucuID)
+client.ytKapat(cfg.sunucuID)
 
 }
 
