@@ -1,6 +1,5 @@
 const cfg = require("../config.json")
 const client = global.client;
-const x = require("../functions.js")
 module.exports = async (role) => {
 
 let entry = await role.guild.fetchAuditLogs({ type: "ROLE_CREATE" }).then(audit => audit.entries.first())
@@ -17,7 +16,7 @@ client.channels.cache.get(cfg.rololuşturmalog).send(`**${entry.executor.tag}** 
 
 role.delete({reason: "İzinsiz açılan rol"})
 
-x.ytKapat(cfg.sunucuID)
+client.ytKapat(cfg.sunucuID)
 
 }
 
