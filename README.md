@@ -1,6 +1,6 @@
 # Altyapı Hakkında
 
-Basit bir role guard altyapısıdır. 30 stara  calmdown sistemli database botu gelicektir. bu altyapıda sadece role ile ilgili korumalar vardır 
+Basit bir role guard altyapısıdır. Yakında calmdown sistemli database botu gelicektir. bu altyapıda sadece role ile ilgili korumalar vardır 
 
 # Kurulum
 
