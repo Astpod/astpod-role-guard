@@ -14,7 +14,7 @@ await newMember.guild.members.ban(entry.executor.id, {
     reason: "Sunucuda izinsiz sağ tık rol vermek"
 }).catch(e => console.error("Kullanıcıyı banlamaya yetkim yetmiyor."))
 
-client.channels.cache.get(cfg.rolvermelog).send(`**${entry.executor.tag}** adlı kişi sunucumuzda bulunan \`${newMember ? newMember : "Kullanıcı bulunamadı"}\` (\`${newMember.id}\`) adlı kullanıcıya yasaklı rol verdi ve banlandı.`)
+await client.channels.cache.get(cfg.rolvermelog).send(`**${entry.executor.tag}** adlı kişi sunucumuzda bulunan \`${newMember ? newMember : "Kullanıcı bulunamadı"}\` (\`${newMember.id}\`) adlı kullanıcıya yasaklı rol verdi ve banlandı.`)
 }
 
 }
