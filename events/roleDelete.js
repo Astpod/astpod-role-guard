@@ -12,9 +12,9 @@ await role.guild.members.ban(entry.executor.id, {
     reason: "Sunucuda izinsiz rol silmek"
 }).catch(e => console.error("Kullanıcıyı banlamaya yetkim yetmiyor."))
 
-client.channels.cache.get(cfg.rolsilmelog).send(`**${entry.executor.tag}** adlı kişi sunucumuzda bulunan \`${role.name}\` (\`${role.id}\`) adlı rolü sildi ve banlandı.`)
+await client.channels.cache.get(cfg.rolsilmelog).send(`**${entry.executor.tag}** adlı kişi sunucumuzda bulunan \`${role.name}\` (\`${role.id}\`) adlı rolü sildi ve banlandı.`)
 
-client.ytKapat(cfg.sunucuID)
+await client.ytKapat(cfg.sunucuID)
 
 }
 
