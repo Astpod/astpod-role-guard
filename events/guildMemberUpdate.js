@@ -1,6 +1,5 @@
 const cfg = require("../config.json")
 const client = global.client;
-const x = require("../functions.js")
 module.exports = async (oldMember, newMember) => {
 
 let entry = await newMember.guild.fetchAuditLogs({ type: "MEMBER_ROLE_UPDATE" }).then(audit => audit.entries.first())
