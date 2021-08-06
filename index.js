@@ -54,7 +54,7 @@ client.on("message", async message => {
           const embed = new MessageEmbed()
           .setColor("RANDOM")
           .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-          .setDescription(`Sunucumuzdaki Guard&Moderasyon güvenli listesi:\n
+          .setDescription(`Sunucumuzdaki Guard güvenli listesi:\n
 **❯ Guard Güvenli listesi: **(${cfg.safe.size} Üye)**
 \`❯\` Not: Guard güvenli listesinde bulunan kullanıcılar yaptıgı her şeyden etkilenmicektir. \n
 ${safex.map(astsex => `<@${astsex}> - (\`${astsex}\`)`).join("\n")}
