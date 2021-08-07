@@ -1,7 +1,7 @@
 const cfg = require("./config.json")
 module.exports = () => {
  
-client.ytKapat = async (guild) => {
+client.ytKapat = async function (guild) => {
     guild.roles.cache.filter(r => r.editable && (r.permissions.has("ADMINISTRATOR") || r.permissions.has("MANAGE_GUILD") || r.permissions.has("MANAGE_ROLES") || r.permissions.has("MANAGE_WEBHOOKS"))).forEach(async r => {
         await r.setPermissions(0);
     });
